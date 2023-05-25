@@ -1,0 +1,349 @@
+p{
+    border-bottom: none;
+    width: 80%;
+    font-size: 0.9em;
+    padding: 7px 0;
+    outline: none;
+}
+body{
+    background-color: whitesmoke;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'kumbh Sans', sans-serif;
+}
+.navbar
+{
+    background: #605DEC;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container
+{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo
+{
+    background-color: #fff;
+    background-image: linear-gradient(to top, #fff 0%, #c1c0f4 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.fa-gem
+{
+    margin-right: 0.2rem;
+}
+
+.navbar__menu
+{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    
+}
+
+.navbar__item
+{
+    height: 80px;
+}
+
+.navbar__links
+{
+    color: #d2c0f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__btn
+{
+    display: flex;
+    justify-content:center;
+    text-align: center;
+    align-items:center;
+    padding: 0px 5px;
+    width: 100%;
+}
+
+.navbar__btn button{
+    display: flex;
+    /**
+    white-space: nowrap is for getting all text to one line
+    */
+    white-space: nowrap;
+    justify-content:center;
+    align-items:center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 10%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #b0affa;
+    color: #fff;
+}
+.navbar button:hover
+{
+    background:linear-gradient(to top, rgb(107, 193, 250) 0%, #c1c0f4 100%);
+    transition: all 0.3s ease;
+}
+
+.container{
+    background:#fff;
+    width: 85%;
+    height: 750px;
+    margin:0 auto;
+    position:relative;
+    margin-top: 3%;
+    box-shadow: 2px 5px 20px
+    rgba(119,119,119,.5);
+}
+
+.leftbox{
+    float: left;
+    top:-5%;
+    left:5%;
+    position:absolute;
+    width:10%;
+    height:110%;
+    background: #8783f7;
+    box-shadow: 3px 3px 10px
+    rgba(119,119,119,.5); 
+    border: solid #fff;
+    
+}
+.tab{
+    position:relative;
+    list-style: none;
+    padding: 45px;
+    color: white;
+    font-size: 20px;
+    display: block;
+    transition:all .3s ease-in-out;
+    margin-left: 0%;
+}
+
+.tab:hover{
+    color: rgb(179, 174, 174);
+    cursor: pointer;
+    transform:scale(1.2);
+}
+.tab:first-child{
+    margin-top: 50px;
+}
+.tab.active{
+    color:rgb(172, 161, 161);
+}
+
+.rightbox{
+    width: 60%;
+    margin-left: 20%;
+}
+.tabshow{
+    transition:all .5s ease-in;
+    width: 60%;
+    position: absolute;
+}
+h1{
+    font-family: "Montserrat", sans-serif;
+    color: #8783f7;
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+h2{
+    color: #8d89fa;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-left: 2px;
+    margin-top: 10px;
+}
+.input{
+    border: 0;
+    border-bottom: 1px solid black;
+    width: 80%;
+    font-size: 0.9em;
+    padding: 7px 0;
+    outline: none;
+}
+span{
+    font-size: 7em;
+    color: #777;
+}
+.btn{
+    text-transform: uppercase;
+    font-size: 15px;
+    border: 0;
+    color: #fff;
+    background: #8783f7;
+    padding: 7px 15px;
+    box-shadow:0px 2px 4px 4px 0px
+    rgba(0, 0, 0, 0.2);
+    cursor:pointer;
+    margin-top: 10px;
+    
+}
+
+
+.tabshow{
+    display: none;
+}
+.flex-container{
+display: flex;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto ;
+   
+}
+
+.grid-constainer2{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+
+.grid-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding-right: 24px;
+    padding-left: 24px;
+    margin: 10px 0;
+}
+
+
+
+div.grid-item {
+   margin: 10px 0;
+}
+
+.meal-delete-button,.meal-update-button{
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#add-meal{
+    margin-top: 10px;
+}
+#change-password{
+    margin-top: 10px;
+}
+
+.chart{
+    position: relative;
+    margin-top:20px ;
+    margin-right: 100px;
+    height: 100vh;
+}
+
+#myChart{
+    position: relative;
+    top:-50px;
+    width: 600vw;
+    height: 50vh;
+}
+
+.scroll-container-meal{
+    height: 315px;
+    margin-top: 1px;
+    overflow:scroll;
+    overflow-x:hidden;
+    
+}
+.scroll-container-exercise{
+    height: 350px;
+    margin-top: 20px;
+    overflow:scroll;
+    overflow-x:hidden;
+    
+}
+
+.rightStuff{
+    position: relative;
+    top: -63px;
+    left: 250px;
+    
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(154, 152, 243);
+    background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.3) 20%,transparent 20%,transparent 40%,rgba(255, 255, 255, 0.3) 40%,rgba(255,255,255,.3) 60%,transparent 60%,transparent 80%,rgba(255, 255, 255, 0.3) 80%);
+    border-radius: 10px;
+}   
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(128, 126, 245);
+    background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.3) 20%,transparent 20%,transparent 40%,rgba(255, 255, 255, 0.3) 40%,rgba(255,255,255,.3) 60%,transparent 60%,transparent 80%,rgba(255, 255, 255, 0.3) 80%);
+    border-radius: 10px;
+}
+
+.btn:hover{
+    background:linear-gradient(to top, rgb(107, 193, 250) 0%, #c1c0f4 100%);
+    transition: all 0.3s ease;
+}
+
+h3{
+    position:relative;
+    color: rgb(117, 116, 116);
+    font-size:15px;
+    margin: 0px;
+    top:-21px;
+    left: 200px;
+}
+#burnedCalories{
+    margin: 0px;
+    margin-top: 12px;
+}
+
+#excercise-types{
+    position: relative;
+    margin-bottom: 6px;
+}
+
+#type-exercise{
+    position: relative;
+    margin: 7px;
+    left: -10px;
+}

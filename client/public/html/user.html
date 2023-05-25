@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6506045505.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/user.css" />
+    <script defer type="module" src="../js/user.js"></script>
+    
+    <!-- <script defer src="../js/isLoggedIn.js"></script> -->
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/" id="navbar__logo">Fat Secret</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <!-- Shift + Alt + Down Arrow to copy one line-->
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__btn">
+            <div class="navbar__btn">
+              <button id="show-login">Logout</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="leftbox">
+        <nav>
+          <a onclick="tabs(0)" class="tab active" id="user-button">
+            <i class="fa fa-user"></i>
+          </a>
+          <a onclick="tabs(1)" class="tab" id="chart-button">
+            <i class="fa-solid fa-chart-line"></i>
+          </a>
+          <a onclick="tabs(2)" class="tab" id="meal-button">
+            <i class="fa-solid fa-burger"></i>
+          </a>
+          <a onclick="tabs(3)" class="tab" id="exercise-button">
+            <i class="fa-solid fa-person-walking"></i>
+          </a>
+          <a onclick="tabs(4)" class="tab" id="edit-button">
+            <i class="fa fa-cog"></i>
+          </a>
+        </nav>
+      </div>
+      <div class="rightbox">
+        <div class="profile tabshow"></div>
+        <div class="stats tabshow">
+          <h1>Stats</h1>
+          <h2>BMI</h2>
+          
+          <div class="rightStuff">
+          <h2>Calorie Deficit This Weak</h2>
+          
+          </div>
+          <div class="chart">
+            <canvas id="myChart" ></canvas>
+          </div>
+          
+        </div>
+
+        <div class="meal tabshow">
+          <h1>Meals</h1>
+          <div class="flex-container">
+            <div>
+              <h4>Name</h4>
+              <input id="meal-name" type="text" class="input" value="" />
+            </div>
+
+            <div>
+              <h4>Calories</h4>
+              <input id="meal-calories" type="text" class="input" value="" />
+            </div>
+
+            <div>
+              <h4>Weight</h4>
+              <input id="meal-weight" type="text" class="input" value="" />
+            </div>
+          </div>
+
+          <div class="flex-container">
+            <div>
+              <h4>Protein</h4>
+              <input id="meal-protein" type="text" class="input" value="" />
+            </div>
+
+            <div>
+              <h4>Carb</h4>
+              <input id="meal-carb" type="text" class="input" value="" />
+            </div>
+
+            <div>
+              <h4>Fat</h4>
+              <input id="meal-fat" type="text" class="input" value="" />
+            </div>
+          </div>
+          <div>
+            <h4>Type</h4>
+            <select name="types" id="meal-types">
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+              <option value="snack">Snack</option>
+            </select>
+          </div>
+
+          <div class="clear"></div>
+          <button class="btn" id="add-meal">Add</button>
+          <div class="scroll-container-meal">
+          <div class="meals-container grid-container">
+            <p class="grid-item">Name</p>
+            <p class="grid-item">Calories</p>
+            <p class="grid-item">Type</p>
+            <p class="grid-item">Weight(g)</p>
+            <p class="grid-item">Protein</p>
+            <p class="grid-item">Carb</p>
+            <p class="grid-item">Fat</p>
+            <p class="grid-item">Date</p>
+            <p class="grid-item"></p>
+          </div>
+        </div>
+        </div>
+        <div class="exercise tabshow">
+          <div>
+
+          <h1>Excercise</h1>
+          <h4  id="type-exercise">Type</h4>
+            <select name="types" id="excercise-types">
+              <option value=Aerobic,7.3>Aerobic</option>
+              <option value=Aqua-Fitness,4>Aqua-Fitness</option>
+              <option value=Archery,3.5>Archery</option>
+              <option value=Badminton,6>Badminton</option>
+              <option value=Beachvolleyball,8>Beachvolleyball</option>
+              <option value=Billiard,2.5>Biliard</option>
+              <option value=Bodybuilding,8>Bodybuilding</option>
+              <option value=Bownling,3>Bowling</option>
+              <option value=Socer,7>Socer</opation>
+              <option value=Golf,4,5>Golf</option>
+              <option value=Handball,8>Handball</option>
+              <option value=Climbing,8>Climbing</option>
+              <option value=Joggin(5km/h),5.1>Joggin (5km/h) </option>
+              <option value=Joggin(8km/h),8.3>Joggin (8km/h)</option>
+              <option value=Joggin(12km/h),12.4>Joggin (12km/h)</option>
+              <option value=Biking(15km/h),6>Biking (15km/h)</option>
+              <option value=Biking(25km/h),10>Biking (25km/h)</option>
+              <option value=Rowing,6>Rowing</option>
+              <option value=Swim(moderat),6>Swim(moderat)</option>
+              <option value=Swim(intensiv),8>Swim(intensiv)</option>
+              <option value=Skiing,6>Skiing</option>
+              <option value=Snowboarding,5,5>Snowboarding</option>
+              <option value=Dancing,5.5>Dancing</option>
+              <option value=Tennis(Single),8>Tennis(Single)</option>
+              <option value=Tennis(Double),6>Tennis(Double)</option>
+              <option value=Tabletennis,4>Tabeltennis</option>
+              <option value=Volleyball,3>Volleyball</option>
+              <option value=Hike(0-5kg.Bagpack),7>Hike(0-5kg Bagpack)</option>
+              <option value=Hike(5-10kg.Bagpack),7.5>Hike(5-10kg Bagpack)</option>
+            </select>
+          </div>
+          <h2>Duration in H</h2>
+          <input type="text" class="input" id="exDuration" value="" />
+          <h2 id="burnedCalories">Burned Calories</h2>
+          <h3>(only if tracked)</h3>
+          <input type="text" class="input" id="exCalories" value="" />
+          <div class="clear"></div>
+
+          
+          
+          <button class="btn" id="add-ex-button">Add</button>
+          <div class="scroll-container-exercise">
+          <div class="exercises-container grid-constainer2">
+            <p class="grid-item">type</p>
+            <p class="grid-item">Burned Calories</p>
+            <p class="grid-item">duration</p>
+            <p class="grid-item"></p>
+          </div>
+        </div>
+        </div>
+
+        <div class="edit-profile tabshow">
+          <button class="btn" id="submit-edit-user">Update</button>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script>
+      const tabBtn = document.querySelectorAll(".tab");
+      const tab = document.querySelectorAll(".tabshow");
+
+      function tabs(panelIndex) {
+        tab.forEach(function (node) {
+          node.style.display = "none";
+        });
+        tab[panelIndex].style.display = "block";
+      }
+      tabs(0);
+    </script>
+    <script>
+      $(".tab").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+      });
+    </script>
+    
+  </body>
+</html>
